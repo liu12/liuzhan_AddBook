@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+ >
+
+ <com.example.addbook.tool.CircleImageView
+     android:id="@+id/user_image"
+     android:layout_width="match_parent"
+     android:layout_height="200dp" 
+     android:src="@drawable/pt17"/>
+ 
+ <LinearLayout android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:id="@+id/userNameLinear"
+     android:orientation="horizontal"
+     android:layout_marginTop="60dp"
+     android:layout_below="@+id/user_image">
+     <TextView android:text="姓   名:"
+         android:layout_width="wrap_content"
+         android:textSize="20dp"
+         android:gravity="center"
+         android:layout_marginLeft="10dp"
+         android:layout_height="30dp"
+         />
+     <EditText android:id="@+id/nameEdit"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:hint="请输入你的姓名. . ."
+         android:layout_marginRight="10dp"/>
+ </LinearLayout>
+ 
+ <LinearLayout android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:id="@+id/phoneLinear"
+     android:orientation="horizontal"
+     android:layout_marginTop="30dp"
+     android:layout_below="@+id/userNameLinear">
+     <TextView android:text="电   话:"
+         android:layout_width="wrap_content"
+         android:textSize="20dp"
+         android:gravity="center"
+         android:layout_marginLeft="10dp"
+         android:layout_height="30dp"
+         />
+     <EditText android:id="@+id/phoneEdit"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:hint="请输入你的电话. . ."
+         android:phoneNumber="true"
+         android:layout_marginRight="10dp"/>
+ </LinearLayout>
+
+ <Button
+     android:id="@+id/completeBtn"
+     android:layout_width="200dp"
+     android:layout_height="30dp"
+     android:layout_below="@+id/phoneLinear"
+     android:layout_centerHorizontal="true"
+     android:layout_marginTop="52dp"
+     android:background="@drawable/btn_selctor"
+     android:text="完成" />
+
+</RelativeLayout>

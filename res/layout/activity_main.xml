@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/pin" >
+
+        <Button
+            android:id="@+id/lookBackUpUser"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:background="@color/purple"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:text="@string/look_backup_user" />
+
+        <Button
+            android:id="@+id/addLinkman"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/purple"
+            android:text="@string/addman" />
+
+        <EditText
+            android:id="@+id/searchEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_toLeftOf="@+id/addLinkman"
+            android:layout_toRightOf="@+id/lookBackUpUser"
+            android:background="@color/pin"
+            
+            android:hint="查找联系人姓名" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/linkManList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout"
+        android:divider="@color/pin"
+        android:dividerHeight="10dp"
+        android:focusable="false"
+        android:longClickable="true" >
+    </ListView>
+
+</RelativeLayout>

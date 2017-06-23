@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.addbook"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="1"
+        android:targetSdkVersion="22" />
+
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE\"/>
+
+    <application     
+        android:allowBackup="true"  
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Light.NoTitleBar" >
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.addbook.user.UserActivity"
+            android:label="@string/title_activity_user" >
+        </activity>
+        <activity
+            android:name=".AddManActivity"
+            android:label="@string/title_activity_add_man" >
+        </activity>   
+        <activity android:name="com.example.addbook.tool.SelectPicPopupWindow" >
+        </activity>
+        <activity android:name="com.example.addbook.bean.SendMessageActivity" >
+        </activity>
+        <activity android:name="com.example.addbook.call_log.CallLogActivity" >
+        </activity>
+        <activity android:name="com.example.addbook.backup_user.BackUpActivity" >
+        </activity>
+        <activity android:name="com.example.addbook.date_note.DateBookActivity">
+        </activity>
+        <activity android:name="com.example.addbook.date_note.EditDateNote">
+        </activity>
+    </application>
+
+</manifest>
